@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/ui/report.ts"],
+  "sourcesContent": ["async function load() {\n  const { lastScan, lastPlan, lastApplyLog } = await chrome.storage.local.get({ lastScan: null, lastPlan: null, lastApplyLog: null })\n  const meta = document.getElementById('meta')!\n  meta.textContent = `Apply status: ${lastApplyLog ? (lastApplyLog.dryRun ? 'Last apply was dry-run' : 'Last apply was real apply') : 'No apply yet'}`\n  ;(document.getElementById('scan') as HTMLPreElement).textContent = lastScan ? JSON.stringify(lastScan, null, 2) : 'N/A'\n  ;(document.getElementById('plan') as HTMLPreElement).textContent = lastPlan ? JSON.stringify(lastPlan, null, 2) : 'N/A'\n}\nload()\n"],
+  "mappings": ";AAAA,eAAe,OAAO;AACpB,QAAM,EAAE,UAAU,UAAU,aAAa,IAAI,MAAM,OAAO,QAAQ,MAAM,IAAI,EAAE,UAAU,MAAM,UAAU,MAAM,cAAc,KAAK,CAAC;AAClI,QAAM,OAAO,SAAS,eAAe,MAAM;AAC3C,OAAK,cAAc,iBAAiB,eAAgB,aAAa,SAAS,2BAA2B,8BAA+B,cAAc;AACjJ,EAAC,SAAS,eAAe,MAAM,EAAqB,cAAc,WAAW,KAAK,UAAU,UAAU,MAAM,CAAC,IAAI;AACjH,EAAC,SAAS,eAAe,MAAM,EAAqB,cAAc,WAAW,KAAK,UAAU,UAAU,MAAM,CAAC,IAAI;AACpH;AACA,KAAK;",
+  "names": []
+}

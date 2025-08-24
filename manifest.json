@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmarkz - Organizer",
+  "version": "0.3.0",
+  "description": "Scan, plan (keeper rules), diff-preview, apply (dry/run), rollback — all safely via Trash.",
+  "action": {
+    "default_title": "Bookmarkz",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "bookmarks",
+    "history",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}

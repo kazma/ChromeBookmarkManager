@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bookmarkz</title>
+  <style>
+    body { font-family: system-ui, sans-serif; min-width: 320px; padding: 12px; }
+    button { padding: 8px 12px; border-radius: 8px; border: 1px solid #ccc; cursor: pointer; margin-right: 6px; }
+    .row { margin: 8px 0; }
+    .stat { margin-top: 8px; font-size: 12px; color: #555; }
+    .ok { color: #0a0; }
+    .warn { color: #c60; }
+  </style>
+</head>
+<body>
+  <h3>Bookmarkz</h3>
+  <div class="row">
+    <button id="scanBtn">Scan</button>
+    <button id="planBtn">Plan</button>
+  </div>
+  <div class="row">
+    <button id="applyDryBtn">Apply (Dry-Run)</button>
+    <button id="applyBtn">Apply</button>
+    <button id="rollbackBtn">Rollback</button>
+  </div>
+  <div class="row">
+    <a href="options.html" target="_blank">Options</a> /
+    <a href="report.html" target="_blank">Report</a> /
+    <a href="diff.html" target="_blank">Diff</a>
+  </div>
+  <div id="status" class="stat">Ready.</div>
+  <script type="module" src="ui/popup.js"></script>
+</body>
+</html>

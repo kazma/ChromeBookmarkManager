@@ -1,0 +1,14 @@
+{
+  "name": "bookmarkz-extension",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.js",
+    "watch": "node esbuild.js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "typescript": "^5.5.4"
+  }
+}
